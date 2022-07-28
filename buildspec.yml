@@ -22,4 +22,4 @@ phases:
       - ./packer build amazon-linux_packer-template.json
   post_build:
     commands:
-      - echo "Se completo la construccion de HashiCorp Packer build completed en `date`"
+      - echo "Se completo la construccion de HashiCorp Packer en `date`"
