@@ -1,7 +1,7 @@
 {
     "variables": {
         "aws_region": "{{env `AWS_REGION`}}",
-        "aws_ami_name": "amazon-linux_{{isotime \"Jan-_2-15:04:05.000\"}}"
+        "aws_ami_name": "amazon-linux_{{isotime `02-Jan-06\_03\_04\_05`}}"
     },
 
     "builders": [{
