@@ -18,8 +18,10 @@ phases:
       - aws configure set region $AWS_REGION
       - ACCESS_KEY=$(jq -r '.AccessKeyId' aws_credentials.json)
       - aws configure set aws_access_key_id $ACCESS_KEY
-      - aws configure set aws_secret_access_key `./jq -r '.SecretAccessKey' aws_credentials.json`
-      - aws configure set aws_session_token `./jq -r '.Token' aws_credentials.json`
+      - SECRET_ACCESS_KEY=$(jq -r '.SecretAccessKey' aws_credentials.json)
+      - aws configure set aws_secret_access_key $SECRET_ACCESS_KEY
+      - SESSION_TOKEN=$(jq -r '.Token' aws_credentials.json)
+      - aws configure set aws_session_token $SESSION_TOKEN
       - echo "Construyendo HashiCorp Packer template, amazon-linux_packer-template.json"
       - ./packer build amazon-linux_packer-template.json
   post_build:
