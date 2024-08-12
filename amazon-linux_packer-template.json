@@ -12,15 +12,7 @@
         "ami_name": "{{user `aws_ami_name`}}",
         "ami_description": "Amazon Linux personalizada",
         "associate_public_ip_address": "true",
-        "source_ami_filter": {
-            "filters": {
-                "virtualization-type": "hvm",
-                "name" : "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
-                "root-device-type": "ebs"
-            },
-            "owners": ["099720109477"],
-            "most_recent": true
-        }
+	"source_ami": "ami-0a6ff6c8708268b33"
     }],
 
     "provisioners": [
