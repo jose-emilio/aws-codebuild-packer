@@ -29,16 +29,11 @@
       "ami_block_device_mappings": [
         {
           "device_name": "/dev/sda1",
-          "volume_size": 8,
+          "volume_size": 15,
           "delete_on_termination": true,
-          "volume_type": "gp2"
+          "volume_type": "gp3"
         }
-      ],
-      "tags": {
-        "Name": "Packer-Built-AMI",
-        "OS_Version": "Ubuntu 22.04",
-        "Release": "Latest"
-      }
+      ]
     }
   ],
   "provisioners": [
