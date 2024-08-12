@@ -22,7 +22,7 @@ phases:
       - SESSION_TOKEN=$(jq -r '.Token' aws_credentials.json)
       - aws configure set aws_session_token $SESSION_TOKEN
       - echo "Construyendo HashiCorp Packer template, amazon-linux_packer-template.json"
-      - ./packer init .
+      - ./packer plugins install hashicorp/amazon
       - ./packer build amazon-linux_packer-template.json
   post_build:
     commands:
