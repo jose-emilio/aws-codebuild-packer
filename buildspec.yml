@@ -8,7 +8,7 @@ phases:
       - curl -qL -o packer.zip https://releases.hashicorp.com/packer/1.11.2/packer_1.11.2_linux_amd64.zip && unzip packer.zip
       - echo "Instalando jq..."
       - curl -qL -o jq https://stedolan.github.io/jq/download/linux64/jq && chmod +x ./jq
-      - echo "Instalando plugins necesarios para Hashicorp Packer
+      - echo "Instalando plugins necesarios para Hashicorp Packer"
       - ./packer init .
       - echo "Validando amazon-linux_packer-template.json"
       - ./packer validate amazon-linux_packer-template.json
